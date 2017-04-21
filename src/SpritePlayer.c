@@ -1,6 +1,7 @@
 #pragma bank=2
 
 #include "SpritePlayer.h"
+#include "ZGBMain.h"
 #include "SpriteManager.h"
 #include "Keys.h"
 #include "Math.h"
@@ -12,8 +13,6 @@ const UINT8 anim_jump[] = {1, 0};
 
 typedef enum {
 	PLAYER_STATE_NORMAL,
-	PLAYER_STATE_LADDER,
-	PLAYER_STATE_HIT,
 	PLAYER_STATE_JUMPING
 }PLAYER_STATE;
 
@@ -21,14 +20,13 @@ PLAYER_STATE player_state;
 INT16 player_accel_y;
 
 struct Sprite* sprite_player = 0;
-
 struct Sprite* player_parent = 0;
 
 UINT16 player_old_x, player_old_y;
 UINT8 bg_hidden = 0;
 
 UINT8 tile_collision;
-INT8 load_next;
+extern INT8 load_next;
 
 void Start_SPRITE_PLAYER() {
 	//AQUÍ SE PODRÍA DEFINIR EL COLLIDER MÁS FINAMENTE
@@ -45,12 +43,12 @@ void Start_SPRITE_PLAYER() {
 
 void CheckCollisionTile() {
 	switch(tile_collision) {
-		case 1u:
-			load_next = 1;
+		case 3u:
+			// load_next = 1;
 			break;
 
-		case 2u:
-			load_next = -1;
+		case 4u:
+			// load_next = -1;
 			break;
 
 		case 33u:
@@ -96,9 +94,10 @@ void Update_SPRITE_PLAYER() {
 			}
 			
 			// Check falling
-			if((player_accel_y >> 4) > 1) {
-				player_state = PLAYER_STATE_JUMPING;
-			}
+//			if((player_accel_y >> 4) > 1) {
+//				player_state = PLAYER_STATE_JUMPING;
+//			}
+
 			break;
 			
 		case PLAYER_STATE_JUMPING:
@@ -113,7 +112,7 @@ void Update_SPRITE_PLAYER() {
 	
 	// gravity
 	
-	if(player_parent == 0 && player_state != PLAYER_STATE_LADDER && player_state != PLAYER_STATE_HIT) {
+	if(player_parent == 0) {
 		if(player_accel_y < 60) {
 			player_accel_y += 2;
 		}
@@ -123,18 +122,21 @@ void Update_SPRITE_PLAYER() {
 			tile_collision = TranslateSprite(THIS, 0, (player_accel_y >> 4));
 		}
 		if(tile_collision) {
-			if(tile_collision != 1u && tile_collision != 2u) {
+			if(tile_collision != 3u && tile_collision != 4u) {
 				player_accel_y = 0;
 				if(player_state == PLAYER_STATE_JUMPING) {
 					player_state = PLAYER_STATE_NORMAL;
 				}
 			}
 
-			 // CheckCollisionTile();
+			 CheckCollisionTile();
 		}
 	}
 	if(player_parent && player_state == PLAYER_STATE_JUMPING) {
 		player_accel_y = 0;
+		player_state = PLAYER_STATE_NORMAL;
+	}
+	if(KEY_TICKED(J_B)){
 		player_state = PLAYER_STATE_NORMAL;
 	}
 }
