@@ -23,6 +23,7 @@ void Start_STATE_GAME() {
 	SHOW_SPRITES;
 
 	scroll_target = SpriteManagerAdd(SPRITE_PLAYER, 10, 10);
+	SpriteManagerAdd(SPRITE_PLAYERHEAD, 10, 10);
 
 	InitScrollTiles(0, 2, tiles, 3);
 	InitScroll(mapWidth, mapHeight, map, collision_tiles, 0, 3);

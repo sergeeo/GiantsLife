@@ -3,8 +3,10 @@
 #include "StateGame.h"
 
 #include "SpritePlayer.h"
+#include "SpritePlayerhead.h"
 
 #include "../res/src/player.h"
+#include "../res/src/playerhead.h"
 #include "Math.h"
 
 UINT8 next_state = STATE_GAME;
@@ -18,6 +20,7 @@ void InitStates() {
 
 void InitSprites() {
 	INIT_SPRITE(SPRITE_PLAYER, player, 3, FRAME_16x16, 1);
+	INIT_SPRITE(SPRITE_PLAYERHEAD, playerhead, 3, FRAME_16x16, 1);
 }
 
 

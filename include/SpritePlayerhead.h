@@ -1,0 +1,8 @@
+#ifndef SPRITE_PLAYERHEAD_H
+#define SPRITE_PLAYERHEAD_H
+
+#include "main.h"
+
+DECLARE_SPRITE(SPRITE_PLAYERHEAD);
+
+#endif
