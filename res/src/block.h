@@ -1,6 +1,6 @@
 /*
 
- SRC/PLAYERBODY.H
+ SRC/BLOCK.H
 
  Include File.
 
@@ -9,7 +9,7 @@
   Format               : Gameboy 4 color.
   Compression          : None.
   Counter              : None.
-  Tile size            : 16 x 16
+  Tile size            : 8 x 8
   Tiles                : 0 to 3
 
   Palette colors       : None.
@@ -24,8 +24,8 @@
 
 
 /* Bank of tiles. */
-#define playerbodyBank 0
+#define blockBank 0
 /* Start of tile array. */
-extern unsigned char playerbody[];
+extern unsigned char block[];
 
-/* End of SRC/PLAYERBODY.H */
+/* End of SRC/BLOCK.H */

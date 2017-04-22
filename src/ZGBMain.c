@@ -12,9 +12,11 @@
 
 #include "SpritePlayer.h"
 #include "SpritePlayerBody.h"
+#include "SpriteBlock.h"
 
 #include "../res/src/player.h"
 #include "../res/src/playerbody.h"
+#include "../res/src/block.h"
 #include "Math.h"
 
 UINT8 next_state = STATE_GAME;
@@ -35,8 +37,9 @@ void InitStates() {
 }
 
 void InitSprites() {
-	INIT_SPRITE(SPRITE_PLAYER, player, 3, FRAME_16x16, 1);
-	INIT_SPRITE(SPRITE_PLAYERBODY, playerbody, 3, FRAME_16x16, 1);
+	INIT_SPRITE(SPRITE_PLAYER, player, 3, FRAME_16x16, 2);
+	INIT_SPRITE(SPRITE_PLAYERBODY, playerbody, 3, FRAME_16x16, 4);
+	INIT_SPRITE(SPRITE_BLOCK,  block,  3, FRAME_8x8, 4);
 }
 
 UINT8 GetTileReplacement(UINT8* tile_ptr, UINT8* tile) {

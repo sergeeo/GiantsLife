@@ -20,7 +20,7 @@ typedef enum {
 typedef enum {
 	SPRITE_PLAYER,
 	SPRITE_PLAYERBODY,
-	
+	SPRITE_BLOCK,
 
 	N_SPRITE_TYPES
 } SPRITE_TYPE;

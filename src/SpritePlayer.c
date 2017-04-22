@@ -9,6 +9,8 @@
 
 UINT8 bank_SPRITE_PLAYER = 2;
 
+const UINT8 anim_openmouth[] = {1, 1};
+const UINT8 anim_closedmouth[] = {1, 0};
 const UINT8 anim_jump[] = {1, 0};
 
 typedef enum {
@@ -24,6 +26,7 @@ struct Sprite* player_parent = 0;
 
 UINT16 player_old_x, player_old_y;
 UINT8 bg_hidden = 0;
+UINT8 moving = 0;
 
 UINT8 tile_collision;
 
@@ -144,8 +147,10 @@ void Update_SPRITE_PLAYER() {
 		player_accel_y = 0;
 		player_state = PLAYER_STATE_NORMAL;
 	}
-	if(KEY_TICKED(J_B)){
-		player_state = PLAYER_STATE_NORMAL;
+	if(KEY_PRESSED(J_B)){
+		SetSpriteAnim(THIS, anim_openmouth, 3u);
+	} else {
+		SetSpriteAnim(THIS, anim_closedmouth, 3u);
 	}
 }
 
