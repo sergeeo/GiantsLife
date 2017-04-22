@@ -1,6 +1,6 @@
 /*
 
- SRC/TILES.H
+ SRC/TILES_LEVEL1.H
 
  Include File.
 
@@ -24,8 +24,8 @@
 
 
 /* Bank of tiles. */
-#define tilesBank 0
+#define tiles_level1Bank 0
 /* Start of tile array. */
-extern unsigned char tiles[];
+extern unsigned char tiles_level1[];
 
-/* End of SRC/TILES.H */
+/* End of SRC/TILES_LEVEL1.H */

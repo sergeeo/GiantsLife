@@ -26,7 +26,6 @@ UINT16 player_old_x, player_old_y;
 UINT8 bg_hidden = 0;
 
 UINT8 tile_collision;
-extern INT8 load_next;
 
 void Start_SPRITE_PLAYER() {
 	//AQUÍ SE PODRÍA DEFINIR EL COLLIDER MÁS FINAMENTE

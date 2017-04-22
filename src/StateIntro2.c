@@ -15,7 +15,6 @@ UINT8 bank_STATE_INTRO2 = 2;
 
 extern UINT8 n_sprite_types;
 UINT8 collision_tiles[] = {1, 0};
-INT8 load_next = 0;
 
 void Start_STATE_INTRO2() {
 	UINT8 i;
