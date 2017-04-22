@@ -30,7 +30,11 @@ extern INT8 load_next;
 
 void Start_SPRITE_PLAYER() {
 	//AQUÍ SE PODRÍA DEFINIR EL COLLIDER MÁS FINAMENTE
-
+	THIS->coll_x = 0;
+	THIS->coll_w = 16;
+	THIS->coll_y = 0;
+	THIS->coll_h = 16;
+	
 	player_accel_y = 0;
 
 	scroll_target = THIS;
@@ -83,7 +87,12 @@ void Jump(){
 	}
 }
 
+/* void UpdatePlayerHead(){
+	TranslateSprite(playerhead_sprite, THIS->x, THIS->y + playerhead_offset_y);
+} */
+
 void Update_SPRITE_PLAYER() {
+	
 	switch(player_state) {
 		case PLAYER_STATE_NORMAL:
 			MovePlayer();

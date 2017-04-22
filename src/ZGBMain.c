@@ -23,7 +23,6 @@ void InitSprites() {
 	INIT_SPRITE(SPRITE_PLAYERHEAD, playerhead, 3, FRAME_16x16, 1);
 }
 
-
 UINT8 GetTileReplacement(UINT8* tile_ptr, UINT8* tile) {
 	if(current_state == STATE_GAME) {
 		if(U_LESS_THAN(255 - (UINT16)*tile_ptr, N_SPRITE_TYPES)) {
