@@ -3,10 +3,10 @@
 #include "StateGame.h"
 
 #include "SpritePlayer.h"
-#include "SpritePlayerhead.h"
+#include "SpritePlayerBody.h"
 
 #include "../res/src/player.h"
-#include "../res/src/playerhead.h"
+#include "../res/src/playerbody.h"
 #include "Math.h"
 
 UINT8 next_state = STATE_GAME;
@@ -20,7 +20,7 @@ void InitStates() {
 
 void InitSprites() {
 	INIT_SPRITE(SPRITE_PLAYER, player, 3, FRAME_16x16, 1);
-	INIT_SPRITE(SPRITE_PLAYERHEAD, playerhead, 3, FRAME_16x16, 1);
+	INIT_SPRITE(SPRITE_PLAYERBODY, playerbody, 3, FRAME_16x16, 1);
 }
 
 UINT8 GetTileReplacement(UINT8* tile_ptr, UINT8* tile) {

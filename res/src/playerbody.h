@@ -1,6 +1,6 @@
 /*
 
- SRC/PLAYERHEAD.H
+ SRC/PLAYERBODY.H
 
  Include File.
 
@@ -24,8 +24,8 @@
 
 
 /* Bank of tiles. */
-#define playerheadBank 0
+#define playerbodyBank 0
 /* Start of tile array. */
-extern unsigned char playerhead[];
+extern unsigned char playerbody[];
 
-/* End of SRC/PLAYERHEAD.H */
+/* End of SRC/PLAYERBODY.H */
