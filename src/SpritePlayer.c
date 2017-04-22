@@ -32,7 +32,7 @@ void Start_SPRITE_PLAYER() {
 	THIS->coll_x = 0;
 	THIS->coll_w = 16;
 	THIS->coll_y = 0;
-	THIS->coll_h = 32;
+	THIS->coll_h = 28;
 	
 	player_accel_y = 0;
 
