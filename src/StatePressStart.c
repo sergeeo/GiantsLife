@@ -1,6 +1,6 @@
 #pragma bank=2
-#include "StateGame.h"
-UINT8 bank_STATE_GAME = 2;
+#include "StatePressStart.h"
+UINT8 bank_STATE_PRESSSTART = 2;
 
 #include "..\res\src\tiles.h"
 #include "..\res\src\map.h"
@@ -10,11 +10,13 @@ UINT8 bank_STATE_GAME = 2;
 #include "Keys.h"
 #include "SpriteManager.h"
 
+/* extern const unsigned char* exo_start_mod_Data[]; */
+
 extern UINT8 n_sprite_types;
 UINT8 collision_tiles[] = {1, 0};
 INT8 load_next = 0;
 
-void Start_STATE_GAME() {
+void Start_STATE_PRESSSTART() {
 	UINT8 i;
 
 	SPRITES_8x16;
@@ -23,16 +25,13 @@ void Start_STATE_GAME() {
 	}
 	SHOW_SPRITES;
 
-	scroll_target = SpriteManagerAdd(SPRITE_PLAYER, 10, 10);
-	SpriteManagerAdd(SPRITE_PLAYERBODY, 10, 10);
-
 	InitScrollTiles(0, 2, tiles, 3);
 	InitScroll(mapWidth, mapHeight, map, collision_tiles, 0, 3);
 	SHOW_BKG;
 }
 
-void Update_STATE_GAME() {
-	if(KEY_TICKED(J_START)) {
-		SetState(STATE_INTRO2);
+void Update_STATE_PRESSSTART() {
+		if(KEY_TICKED(J_START)) {
+			SetState(STATE_INTRO1);
 	}
 }

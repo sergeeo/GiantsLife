@@ -1,8 +1,0 @@
-#ifndef SPRITE_PLAYERBODY_H
-#define SPRITE_PLAYERBODY_H
-
-#include "main.h"
-
-DECLARE_SPRITE(SPRITE_PLAYERBODY);
-
-#endif

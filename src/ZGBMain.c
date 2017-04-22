@@ -1,6 +1,14 @@
 #include "ZGBMain.h"
 
 #include "StateGame.h"
+#include "StateGame2.h"
+#include "StateGame3.h"
+#include "StateGameOver.h"
+#include "StateIntro1.h"
+#include "StateIntro2.h"
+#include "StateIntro3.h"
+#include "StatePressStart.h"
+#include "StateVictory.h"
 
 #include "SpritePlayer.h"
 #include "SpritePlayerBody.h"
@@ -15,7 +23,15 @@ SET_N_STATES(N_STATES);
 SET_N_SPRITE_TYPES(N_SPRITE_TYPES);
 
 void InitStates() {
+	INIT_STATE(STATE_PRESSSTART);
+	INIT_STATE(STATE_INTRO1);
 	INIT_STATE(STATE_GAME);
+	INIT_STATE(STATE_INTRO2);
+	INIT_STATE(STATE_GAME2);
+	INIT_STATE(STATE_INTRO3);
+	INIT_STATE(STATE_GAME3);
+	INIT_STATE(STATE_GAMEOVER);
+	INIT_STATE(STATE_VICTORY);
 }
 
 void InitSprites() {
