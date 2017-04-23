@@ -2,6 +2,9 @@
 #include "SpritePlane.h"
 #include "SpriteManager.h"
 #include "ZGBMain.h"
+#include "Math.h"
+#include "SpriteManager.h"
+
 UINT8 bank_SPRITE_PLANE = 2;
 
 // const UINT8 anim_idleblock[] = {1, 0};

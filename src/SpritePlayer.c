@@ -14,6 +14,7 @@ const UINT8 anim_closedmouth[] = {1, 0};
 const UINT8 anim_jump[] = {1, 0};
 
 typedef enum {
+	PLAYER_STATE_IDLE,
 	PLAYER_STATE_NORMAL,
 	PLAYER_STATE_JUMPING
 }PLAYER_STATE;
@@ -72,10 +73,12 @@ void CheckCollisionTile() {
 
 void MovePlayer(){
 	if(KEY_PRESSED(J_LEFT)){
+	//	tile_collision = TranslateSprite(THIS, -1, 0);
 		tile_collision = TranslateSprite(THIS, -1 << delta_time, 0);
 		THIS->flags = OAM_VERTICAL_FLAG;
 	}
 	else if(KEY_PRESSED(J_RIGHT)){
+	//	tile_collision = TranslateSprite(THIS, 1, 0);
 		tile_collision = TranslateSprite(THIS, 1 << delta_time, 0);
 		THIS->flags = 0u;
 	}
@@ -96,8 +99,15 @@ void Jump(){
 void Update_SPRITE_PLAYER() {
 	
 	switch(player_state) {
+		case PLAYER_STATE_IDLE:
 		case PLAYER_STATE_NORMAL:
 			MovePlayer();
+			
+			if(KEY_PRESSED(J_RIGHT) || KEY_PRESSED(J_LEFT)){
+				player_state = PLAYER_STATE_NORMAL;
+			} else {
+				player_state = PLAYER_STATE_IDLE;
+			}
 			
 			// Check jumping
 			if(KEY_TICKED(J_A)) {

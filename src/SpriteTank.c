@@ -2,6 +2,8 @@
 #include "SpriteTank.h"
 #include "SpriteManager.h"
 #include "ZGBMain.h"
+#include "Math.h"
+
 UINT8 bank_SPRITE_TANK = 2;
 
 // const UINT8 anim_idleblock[] = {1, 0};
@@ -62,14 +64,18 @@ void Update_SPRITE_TANK() {
 			}
 			if(tank_direction == 0u){
 				THIS->flags = OAM_VERTICAL_FLAG;
-				tile_collisiontank = TranslateSprite(THIS, -tank_speed, 0);
-				// THIS->x = THIS->x + tank_speed;
+				// tile_collisiontank = TranslateSprite(THIS, -tank_speed, 0);
+				THIS->x = THIS->x + tank_speed;
 			} else {
 				THIS->flags = 0u;
-				tile_collisiontank = TranslateSprite(THIS, +tank_speed, 0);
-				// THIS->x = THIS->x - tank_speed;
+				// tile_collisiontank = TranslateSprite(THIS, +tank_speed, 0);
+				THIS->x = THIS->x - tank_speed;
 			}
 			break;
+			
+			if (tile_collisiontank) {
+				
+			}
 	}
 
 }

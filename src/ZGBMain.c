@@ -23,7 +23,7 @@
 #include "../res/src/tank.h"
 #include "Math.h"
 
-UINT8 next_state = STATE_GAME;
+UINT8 next_state = STATE_PRESSSTART;
 
 SET_N_STATES(N_STATES);
 SET_N_SPRITE_TYPES(N_SPRITE_TYPES);
