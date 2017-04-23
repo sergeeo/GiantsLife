@@ -31,6 +31,6 @@ void Start_STATE_VICTORY() {
 
 void Update_STATE_VICTORY() {
 	if(KEY_TICKED(J_START)) {
-	SetState(STATE_GAMEOVER);
+	SetState(STATE_PRESSSTART);
 	}
 }

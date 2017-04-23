@@ -11,7 +11,7 @@ UINT8 bank_SPRITE_PLANE = 2;
 const UINT8 anim_planedestroy[] = {5, 1, 2, 1, 2, 3};
 
 extern struct Sprite* sprite_player;
-UINT8 plane_speed = 2u;
+UINT8 plane_speed = 4u;
 UINT8 plane_direction = 0u;
 
 typedef enum  {

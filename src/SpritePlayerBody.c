@@ -21,25 +21,22 @@ extern struct Sprite* sprite_player;
 const UINT8 anim_idle[] = {1, 0};
 const UINT8 anim_walk[] = {6, 0, 1, 2, 3, 4, 5};
 
-UINT8 previous_x;
-
 void Start_SPRITE_PLAYERBODY() {
 	SetSpriteAnim(THIS, anim_idle, 3u);
 	THIS->x = sprite_player->x;
 	THIS->y = sprite_player->y + 13u;
-	previous_x = THIS->x;
 }
 
 void Update_SPRITE_PLAYERBODY() {
 	
-//	if(player_state == PLAYER_STATE_IDLE) {
-	if (previous_x == THIS->x) {
-		SetSpriteAnim(THIS, anim_idle, 9u);
-	}else{
-//	}else if(player_state == PLAYER_STATE_WALKING){
+	if(KEY_PRESSED(J_LEFT) || KEY_PRESSED(J_RIGHT)){
 		SetSpriteAnim(THIS, anim_walk, 14u);
+	} else {
+		SetSpriteAnim(THIS, anim_idle, 9u);
 	}
-	previous_x = THIS->x;
+
+	//positioning
+	
 	THIS->x = sprite_player->x;
 	THIS->y = sprite_player->y + 13u;
 	
@@ -50,6 +47,8 @@ void Update_SPRITE_PLAYERBODY() {
 	} else if(sprite_player->flags == 0u) {
 		THIS->flags = 0u;
 	}
+	
+	
 }
 
 void Destroy_SPRITE_PLAYERBODY() {

@@ -31,7 +31,4 @@ void Start_STATE_GAME() {
 }
 
 void Update_STATE_GAME() {
-	if(KEY_TICKED(J_START)) {
-		SetState(STATE_INTRO2);
-	}
 }

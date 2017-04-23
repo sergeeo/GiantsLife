@@ -50,23 +50,9 @@ void Start_SPRITE_PLAYER() {
 
 void CheckCollisionTile() {
 	switch(tile_collision) {
-		case 3u:
-			// load_next = 1;
-			break;
-
-		case 4u:
-			// load_next = -1;
-			break;
-
-		case 33u:
-		case 35u:
-			// Hit();
-			break;
-
-		case 27u:
-		case 28u:
+		case 20u:
 			// SET_BIT(stage_completion, current_stage);
-			// SetState(STATE_STAGE_SELECT);
+			SetState(STATE_VICTORY);
 			break;
 	}
 }
@@ -91,10 +77,6 @@ void Jump(){
 		player_parent = 0;
 	}
 }
-
-/* void UpdatePlayerHead(){
-	TranslateSprite(playerhead_sprite, THIS->x, THIS->y + playerhead_offset_y);
-} */
 
 void Update_SPRITE_PLAYER() {
 	
