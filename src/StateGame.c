@@ -11,7 +11,7 @@ UINT8 bank_STATE_GAME = 2;
 #include "SpriteManager.h"
 
 extern UINT8 n_sprite_types;
-UINT8 collision_tiles[] = {1,2,3,4,5,0};
+UINT8 collision_tiles[] = {1,2,3,4,5, 20,0};
 
 void Start_STATE_GAME() {
 	UINT8 i;
