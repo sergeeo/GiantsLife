@@ -19,8 +19,8 @@ BLOCK_STATE block_state;
 void Start_SPRITE_BLOCK() {
 	THIS->coll_x = 1u;
 	THIS->coll_y = 1u;
-	THIS->coll_w = 6u;
-	THIS->coll_h = 6u;
+	THIS->coll_w = 16u;
+	THIS->coll_h = 16u;
 	block_state = BLOCK_NORMAL;
 }
 
@@ -42,7 +42,7 @@ void Update_SPRITE_BLOCK() {
 					if(CheckCollision(THIS, spr)) {
 						//SpriteManagerRemove(THIS_IDX);
 						block_state = BLOCK_DESTROY;
-						SetSpriteAnim(THIS, anim_destroy, 3u);
+						SetSpriteAnim(THIS, anim_destroy, 6u);
 					}
 				}
 			}

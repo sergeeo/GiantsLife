@@ -38,7 +38,7 @@ void InitStates() {
 
 void InitSprites() {
 	INIT_SPRITE(SPRITE_PLAYER, player, 3, FRAME_16x16, 2);
-	INIT_SPRITE(SPRITE_PLAYERBODY, playerbody, 3, FRAME_16x16, 4);
+	INIT_SPRITE(SPRITE_PLAYERBODY, playerbody, 3, FRAME_16x16, 6);
 	INIT_SPRITE(SPRITE_BLOCK,  block,  3, FRAME_16x16, 5);
 }
 

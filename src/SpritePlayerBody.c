@@ -15,7 +15,7 @@ extern struct Sprite* sprite_player;
 extern enum player_state;
 
 const UINT8 anim_idle[] = {1, 0};
-const UINT8 anim_walk[] = {4, 0, 1, 2, 3};
+const UINT8 anim_walk[] = {6, 0, 1, 2, 3, 4, 5};
 
 UINT8 previous_x;
 
@@ -33,7 +33,7 @@ void Update_SPRITE_PLAYERBODY() {
 	// guarripeich 
 	
 	if(previous_x != THIS->x){
-		SetSpriteAnim(THIS, anim_walk, 3u);
+		SetSpriteAnim(THIS, anim_walk, 9u);
 	} else {
 		SetSpriteAnim(THIS, anim_idle, 3u);
 	}
