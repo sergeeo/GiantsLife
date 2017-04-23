@@ -7,7 +7,7 @@
  Info:
    Section       : 
    Bank          : 0
-   Map size      : 80 x 18
+   Map size      : 50 x 18
    Tile set      : tiles_level1.gbr
    Plane count   : 1 plane (8 bits)
    Plane order   : Tiles are continues
@@ -18,7 +18,7 @@
 
 */
 
-#define level1_1Width 80
+#define level1_1Width 50
 #define level1_1Height 18
 #define level1_1Bank 0
 

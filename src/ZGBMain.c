@@ -39,7 +39,7 @@ void InitStates() {
 void InitSprites() {
 	INIT_SPRITE(SPRITE_PLAYER, player, 3, FRAME_16x16, 2);
 	INIT_SPRITE(SPRITE_PLAYERBODY, playerbody, 3, FRAME_16x16, 4);
-	INIT_SPRITE(SPRITE_BLOCK,  block,  3, FRAME_16x16, 4);
+	INIT_SPRITE(SPRITE_BLOCK,  block,  3, FRAME_16x16, 5);
 }
 
 UINT8 GetTileReplacement(UINT8* tile_ptr, UINT8* tile) {
@@ -50,6 +50,5 @@ UINT8 GetTileReplacement(UINT8* tile_ptr, UINT8* tile) {
 		}
 		*tile = *tile_ptr;
 	}
-
 	return 255u;
 }
