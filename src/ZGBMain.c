@@ -40,6 +40,8 @@ void InitSprites() {
 	INIT_SPRITE(SPRITE_PLAYER, player, 3, FRAME_16x16, 2);
 	INIT_SPRITE(SPRITE_PLAYERBODY, playerbody, 3, FRAME_16x16, 6);
 	INIT_SPRITE(SPRITE_BLOCK,  block,  3, FRAME_16x16, 5);
+	INIT_SPRITE(SPRITE_PLANE, plane, 3, FRAME_16X16, 4);
+	INIT_SPRITE(SPRITE_TANK, tank, 3, FRAME_16X16, 6);
 }
 
 UINT8 GetTileReplacement(UINT8* tile_ptr, UINT8* tile) {
