@@ -2,8 +2,8 @@
 #include "StatePressStart.h"
 UINT8 bank_STATE_PRESSSTART = 2;
 
-#include "..\res\src\tiles.h"
-#include "..\res\src\map.h"
+#include "..\res\src\pressstarttiles.h"
+#include "..\res\src\pressstart.h"
 
 #include "ZGBMain.h"
 #include "Scroll.h"
@@ -24,8 +24,8 @@ void Start_STATE_PRESSSTART() {
 	}
 	SHOW_SPRITES;
 
-	InitScrollTiles(0, 2, tiles, 3);
-	InitScroll(mapWidth, mapHeight, map, collision_tiles, 0, 3);
+	InitScrollTiles(0, 23, pressstarttiles, 3);
+	InitScroll(pressstartWidth, pressstartHeight, pressstart, collision_tiles, 0, 3);
 	SHOW_BKG;
 }
 
