@@ -50,9 +50,9 @@ void Start_SPRITE_PLAYER() {
 
 void CheckCollisionTile() {
 	switch(tile_collision) {
-		case 20u:
+		case 25u:
 			// SET_BIT(stage_completion, current_stage);
-			SetState(STATE_VICTORY);
+			//SetState(STATE_VICTORY);
 			break;
 	}
 }

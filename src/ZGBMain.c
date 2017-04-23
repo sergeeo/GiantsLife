@@ -15,12 +15,14 @@
 #include "SpriteBlock.h"
 #include "SpritePlane.h"
 #include "SpriteTank.h"
+#include "SpriteOut.h"
 
 #include "../res/src/player.h"
 #include "../res/src/playerbody.h"
 #include "../res/src/block.h"
 #include "../res/src/plane.h"
 #include "../res/src/tank.h"
+#include "../res/src/out.h"
 #include "Math.h"
 
 UINT8 next_state = STATE_PRESSSTART;
@@ -46,6 +48,7 @@ void InitSprites() {
 	INIT_SPRITE(SPRITE_BLOCK, block,  3, FRAME_16x16, 5);
 	INIT_SPRITE(SPRITE_PLANE, plane, 3, FRAME_16x16, 4);
 	INIT_SPRITE(SPRITE_TANK, tank, 3, FRAME_16x16, 6);
+	INIT_SPRITE(SPRITE_OUT, out, 3, FRAME_16x16, 1);
 }
 
 UINT8 GetTileReplacement(UINT8* tile_ptr, UINT8* tile) {
