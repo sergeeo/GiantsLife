@@ -1,6 +1,6 @@
 /*
 
- SRC/PLANER.B3.C
+ SRC/PLANE.B3.C
 
  Tile Source File.
 
@@ -59,4 +59,4 @@ unsigned char plane[] =
   0x03,0x40,0x01,0x00,0x00,0x30,0x10,0x00
 };
 
-/* End of SRC/PLANER.B3.C */
+/* End of SRC/PLANE.B3.C */

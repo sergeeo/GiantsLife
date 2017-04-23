@@ -1,6 +1,6 @@
 /*
 
- SRC/PLANER.H
+ SRC/TANK.H
 
  Include File.
 
@@ -10,7 +10,7 @@
   Compression          : None.
   Counter              : None.
   Tile size            : 16 x 16
-  Tiles                : 0 to 3
+  Tiles                : 0 to 5
 
   Palette colors       : None.
   SGB Palette          : None.
@@ -24,8 +24,8 @@
 
 
 /* Bank of tiles. */
-#define planeBank 0
+#define tankBank 0
 /* Start of tile array. */
-extern unsigned char plane[];
+extern unsigned char tank[];
 
-/* End of SRC/PLANER.H */
+/* End of SRC/TANK.H */
