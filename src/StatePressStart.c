@@ -24,7 +24,7 @@ void Start_STATE_PRESSSTART() {
 	}
 	SHOW_SPRITES;
 
-	InitScrollTiles(0, 23, pressstarttiles, 3);
+	InitScrollTiles(0, 24, pressstarttiles, 3);
 	InitScroll(pressstartWidth, pressstartHeight, pressstart, collision_tiles, 0, 3);
 	SHOW_BKG;
 }
