@@ -1,5 +1,5 @@
 #pragma bank=2
-#include "SpriteBlock.h"
+#include "SpriteTank.h"
 #include "SpriteManager.h"
 #include "ZGBMain.h"
 UINT8 bank_SPRITE_TANK = 2;
@@ -25,25 +25,25 @@ void Start_SPRITE_TANK() {
 	tank_state = TANK_NORMAL;
 }
 
-void Update_SPRITE_BLOCK() {
+void Update_SPRITE_TANK() {
 
 	UINT8 i;
 	struct Sprite* spr;
 	
-	switch(block_state){
-		case BLOCK_DESTROY:
-			if(THIS->current_frame == 3) {
+	switch(tank_state){
+		case TANK_DESTROY:
+			if(THIS->current_frame == 5) {
 				SpriteManagerRemove(THIS_IDX);
 				// SpriteManagerRemoveSprite(THIS);
 			}
 			break;
-		case BLOCK_NORMAL:
+		case TANK_NORMAL:
 			SPRITEMANAGER_ITERATE(i, spr) {
 				if(spr->type == SPRITE_PLAYER || spr->type == SPRITE_PLAYERBODY) {
 					if(CheckCollision(THIS, spr)) {
 						//SpriteManagerRemove(THIS_IDX);
-						block_state = BLOCK_DESTROY;
-						SetSpriteAnim(THIS, anim_destroy, 6u);
+						tank_state = TANK_DESTROY;
+						SetSpriteAnim(THIS, anim_destroytank, 3u);
 					}
 				}
 			}
@@ -52,5 +52,5 @@ void Update_SPRITE_BLOCK() {
 
 }
 
-void Destroy_SPRITE_BLOCK() {
+void Destroy_SPRITE_TANK() {
 }
