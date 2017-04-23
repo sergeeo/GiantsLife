@@ -20,23 +20,25 @@ const UINT8 anim_walk[] = {6, 0, 1, 2, 3, 4, 5};
 UINT8 previous_x;
 
 void Start_SPRITE_PLAYERBODY() {
+	SetSpriteAnim(THIS, anim_idle, 3u);
 	THIS->x = sprite_player->x;
 	THIS->y = sprite_player->y + 13u;
+	previous_x = THIS->x;
 }
 
 void Update_SPRITE_PLAYERBODY() {
 	
+	if (previous_x == THIS->x) {
+		SetSpriteAnim(THIS, anim_walk, 9u);
+	}else{
+		SetSpriteAnim(THIS, anim_walk, 9u);
+	}
 	previous_x = THIS->x;
 	THIS->x = sprite_player->x;
 	THIS->y = sprite_player->y + 13u;
 	
 	// guarripeich 
 	
-	if(previous_x != THIS->x){
-		SetSpriteAnim(THIS, anim_walk, 9u);
-	} else {
-		SetSpriteAnim(THIS, anim_idle, 3u);
-	}
 	if(sprite_player->flags == OAM_VERTICAL_FLAG) {
 		THIS->flags = OAM_VERTICAL_FLAG;
 	} else if(sprite_player->flags == 0u) {

@@ -19,6 +19,8 @@ typedef enum  {
 
 TANK_STATE tank_state;
 
+UINT8 tile_collisiontank;
+
 void Start_SPRITE_TANK() {
 	THIS->coll_x = 2u;
 	THIS->coll_y = 9u;
@@ -60,10 +62,12 @@ void Update_SPRITE_TANK() {
 			}
 			if(tank_direction == 0u){
 				THIS->flags = OAM_VERTICAL_FLAG;
-				THIS->x = THIS->x + tank_speed;
+				tile_collisiontank = TranslateSprite(THIS, -tank_speed, 0);
+				// THIS->x = THIS->x + tank_speed;
 			} else {
 				THIS->flags = 0u;
-				THIS->x = THIS->x - tank_speed;
+				tile_collisiontank = TranslateSprite(THIS, +tank_speed, 0);
+				// THIS->x = THIS->x - tank_speed;
 			}
 			break;
 	}
