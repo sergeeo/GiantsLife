@@ -1,0 +1,8 @@
+#ifndef STATEPRESSSTART_H
+#define STATEPRESSSTART_H
+
+#include "main.h"
+
+DECLARE_STATE(STATE_PRESSSTART);
+
+#endif

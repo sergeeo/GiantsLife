@@ -1,6 +1,6 @@
 /*
 
- SRC/TILES.H
+ SRC/OUT.H
 
  Include File.
 
@@ -9,8 +9,8 @@
   Format               : Gameboy 4 color.
   Compression          : None.
   Counter              : None.
-  Tile size            : 8 x 8
-  Tiles                : 0 to 19
+  Tile size            : 16 x 16
+  Tiles                : 0 to 1
 
   Palette colors       : None.
   SGB Palette          : None.
@@ -24,8 +24,8 @@
 
 
 /* Bank of tiles. */
-#define tilesBank 0
+#define outBank 0
 /* Start of tile array. */
-extern unsigned char tiles[];
+extern unsigned char out[];
 
-/* End of SRC/TILES.H */
+/* End of SRC/OUT.H */

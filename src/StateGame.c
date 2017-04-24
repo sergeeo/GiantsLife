@@ -2,14 +2,17 @@
 #include "StateGame.h"
 UINT8 bank_STATE_GAME = 2;
 
-#include "..\res\src\tiles.h"
-#include "..\res\src\map.h"
+#include "..\res\src\level1_1.h"
+#include "..\res\src\tiles_level1.h"
 
 #include "ZGBMain.h"
 #include "Scroll.h"
+#include "Keys.h"
 #include "SpriteManager.h"
 
 extern UINT8 n_sprite_types;
+UINT8 collision_tiles[] = {1,2,3,4,5,0};
+
 void Start_STATE_GAME() {
 	UINT8 i;
 
@@ -19,10 +22,11 @@ void Start_STATE_GAME() {
 	}
 	SHOW_SPRITES;
 
-	scroll_target = SpriteManagerAdd(SPRITE_PLAYER, 50, 50);
+	scroll_target = SpriteManagerAdd(SPRITE_PLAYER, 20, 50);
+	SpriteManagerAdd(SPRITE_PLAYERBODY, 20, 50);
 
-	InitScrollTiles(0, 2, tiles, 3);
-	InitScroll(mapWidth, mapHeight, map, 0, 0, 3);
+	InitScrollTiles(0, 25, tiles_level1, 3);
+	InitScroll(level1_1Width, level1_1Height, level1_1, collision_tiles, 0, 3);
 	SHOW_BKG;
 }
 

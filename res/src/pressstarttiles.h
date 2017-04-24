@@ -1,6 +1,6 @@
 /*
 
- SRC/TILES.H
+ SRC/PRESSSTARTTILES.H
 
  Include File.
 
@@ -10,7 +10,7 @@
   Compression          : None.
   Counter              : None.
   Tile size            : 8 x 8
-  Tiles                : 0 to 19
+  Tiles                : 0 to 23
 
   Palette colors       : None.
   SGB Palette          : None.
@@ -24,8 +24,8 @@
 
 
 /* Bank of tiles. */
-#define tilesBank 0
+#define pressstarttilesBank 0
 /* Start of tile array. */
-extern unsigned char tiles[];
+extern unsigned char pressstarttiles[];
 
-/* End of SRC/TILES.H */
+/* End of SRC/PRESSSTARTTILES.H */
