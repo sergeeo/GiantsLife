@@ -5,6 +5,8 @@ This was made for [Ludum Dare 38 Compo](https://ldjam.com/events/ludum-dare/38) 
 
 I want to rethink all this and make a game out of it. I have to think about gameplay, assets, sprite interaction, music, sound effects, etc. 48 hours have not been enough for a C newbie like me :)
 
+![Imgur](http://i.imgur.com/dakr7Fv.gif)
+
 [ZGB](https://github.com/Zal0/ZGB) and its basic template were used, with many code snippets taken directly from [Super Princess 2097 EXODUS](https://github.com/Zal0/gbjam2016) (jump and lots of other ideas).
 
 Code is really messy, so please don't take it as an example for anything.
